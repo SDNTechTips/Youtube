@@ -1,0 +1,27 @@
+Windows - Activation watermark
+
+Go to Regedit > HLCU\Control Panel\Desktop\
+Change values for > Paint desktop version > Set from 0 to 4
+Run command prompt as administrator  > Gupdate /force
+	
+Go to Regedit > HKLM\System\currentControlSet\Services\svsvc
+Change values for > "Start" > Set from 3 to 4
+Run command prompt as administrator  > Gupdate /force
+
+Press Windows + PauseBreak > Check your Windows edition (example :  Windows 10 Pro)
+	
+On your browser go to > https://docs.microsoft.com/en-us/windows-server/get-started/kms-client-activation-keys
+	
+Check for the key based on your windows edition and replace it with the below command "key"	
+	
+Run command prompt as administrator  >
+	slmgr /ipk "key"
+	slmgr /skms kms8.msguides.com
+	slmgr /ato
+	
+Go to Regedit > HLCU\Control Panel\Desktop\
+Change values for > Paint desktop version > Set from 4 to 0
+Run command prompt as administrator  > Gupdate /force
+
+
+Restart
